@@ -79,6 +79,38 @@ pub enum ct_typeid_t {
     CTT_DEVICE,
 }
 
+/*
+ * Process contract event types; see process(5), ct_event_get_flags(CONTRACT),
+ * ct_tmpl_set_critical(3CONTRACT), etc:
+ */
+pub const CT_PR_EV_EMPTY: c_uint = 0x1;
+pub const CT_PR_EV_FORK: c_uint = 0x2;
+pub const CT_PR_EV_EXIT: c_uint = 0x4;
+pub const CT_PR_EV_CORE: c_uint = 0x8;
+pub const CT_PR_EV_SIGNAL: c_uint = 0x10;
+pub const CT_PR_EV_HWERR: c_uint = 0x20;
+pub const CT_PR_ALLEVENT: c_uint = 0x3f;
+pub const CT_PR_ALLFATAL: c_uint =
+    CT_PR_EV_CORE | CT_PR_EV_SIGNAL | CT_PR_EV_HWERR;
+
+/*
+ * Process contract parameters; see process(5),
+ * ct_pr_tmpl_set_param(3CONTRACT), etc:
+ */
+pub const CT_PR_INHERIT: c_uint = 0x1;
+pub const CT_PR_NOORPHAN: c_uint = 0x2;
+pub const CT_PR_PGRPONLY: c_uint = 0x4;
+pub const CT_PR_REGENT: c_uint = 0x8;
+pub const CT_PR_ALLPARAM: c_uint = 0xf;
+
+/*
+ * Device contract event types:
+ */
+pub const CT_DEV_EV_ONLINE: c_uint = 0x1;
+pub const CT_DEV_EV_DEGRADED: c_uint = 0x2;
+pub const CT_DEV_EV_OFFLINE: c_uint = 0x4;
+pub const CT_DEV_ALLEVENT: c_uint = 0x7;
+
 #[cfg(feature = "private")]
 #[derive(Debug)]
 #[repr(C)]
