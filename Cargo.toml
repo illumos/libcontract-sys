@@ -1,0 +1,21 @@
+[package]
+name = "libcontract-sys"
+version = "1.0.0"
+edition = "2021"
+license = "MPL-2.0"
+description = "native bindings to libcontract(3LIB), the illumos contract(5) management library"
+keywords = ["contract", "illumos", "libcontract", "process"]
+repository = "https://github.com/illumos/libcontract-sys"
+
+[features]
+default = []
+#
+# To enable the use of Private (unstable) interfaces, use the "private"
+# feature:
+#
+private = []
+
+[dependencies]
+libc = "0.2"
+num-derive = "0.3"
+num-traits = "0.2"
