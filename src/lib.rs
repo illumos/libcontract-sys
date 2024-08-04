@@ -199,17 +199,17 @@ extern "C" {
     pub fn ct_status_free(stathdl: *mut ct_stathdl_t);
 
     pub fn ct_status_get_id(stathdl: *mut ct_stathdl_t) -> ctid_t;
-    pub fn ct_status_get_zoneid(stathdl: ct_stathdl_t) -> zoneid_t;
-    pub fn ct_status_get_type(stathdl: ct_stathdl_t) -> *const c_char;
-    pub fn ct_status_get_state(stathdl: ct_stathdl_t) -> ctstate_t;
-    pub fn ct_status_get_holder(stathdl: ct_stathdl_t) -> id_t;
-    pub fn ct_status_get_nevents(stathdl: ct_stathdl_t) -> c_int;
-    pub fn ct_status_get_ntime(stathdl: ct_stathdl_t) -> c_int;
-    pub fn ct_status_get_qtime(stathdl: ct_stathdl_t) -> c_int;
-    pub fn ct_status_get_nevid(stathdl: ct_stathdl_t) -> ctevid_t;
-    pub fn ct_status_get_cookie(stathdl: ct_stathdl_t) -> u64;
-    pub fn ct_status_get_informative(stathdl: ct_stathdl_t) -> c_uint;
-    pub fn ct_status_get_critical(stathdl: ct_stathdl_t) -> c_uint;
+    pub fn ct_status_get_zoneid(stathdl: *mut ct_stathdl_t) -> zoneid_t;
+    pub fn ct_status_get_type(stathdl: *mut ct_stathdl_t) -> *const c_char;
+    pub fn ct_status_get_state(stathdl: *mut ct_stathdl_t) -> ctstate_t;
+    pub fn ct_status_get_holder(stathdl: *mut ct_stathdl_t) -> id_t;
+    pub fn ct_status_get_nevents(stathdl: *mut ct_stathdl_t) -> c_int;
+    pub fn ct_status_get_ntime(stathdl: *mut ct_stathdl_t) -> c_int;
+    pub fn ct_status_get_qtime(stathdl: *mut ct_stathdl_t) -> c_int;
+    pub fn ct_status_get_nevid(stathdl: *mut ct_stathdl_t) -> ctevid_t;
+    pub fn ct_status_get_cookie(stathdl: *mut ct_stathdl_t) -> u64;
+    pub fn ct_status_get_informative(stathdl: *mut ct_stathdl_t) -> c_uint;
+    pub fn ct_status_get_critical(stathdl: *mut ct_stathdl_t) -> c_uint;
 
     /*
      * Common contract event functions:
