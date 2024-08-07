@@ -2,7 +2,7 @@
 name = "libcontract-sys"
 version = "1.0.0"
 edition = "2021"
-license = "MPL-2.0"
+license = "MIT OR Apache-2.0"
 description = "native bindings to libcontract(3LIB), the illumos contract(5) management library"
 keywords = ["contract", "illumos", "libcontract", "process"]
 repository = "https://github.com/illumos/libcontract-sys"
